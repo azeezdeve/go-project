@@ -3,7 +3,6 @@ package controller
 import (
 	"context"
 	"errors"
-	"fmt"
 	"go-project/model"
 	"sync"
 )
@@ -42,7 +41,7 @@ func (b book) GetListOfBook(ctx context.Context) ([]*model.Books, error) {
 		bok := bk
 		resp = append(resp, &bok)
 	}
-	fmt.Println("storage", storage)
+
 	return resp, nil
 }
 
